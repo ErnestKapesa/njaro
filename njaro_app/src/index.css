@@ -5,3 +5,55 @@ body {
   background: #fff;
   color: #1a202c;
 }
+
+/* Glassmorphism and NFT card styles */
+.glassmorphism {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  transition: transform 0.3s cubic-bezier(.4,2,.3,1), box-shadow 0.3s;
+}
+.glassmorphism:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 16px 48px rgba(227,181,5,0.18);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-in {
+  animation: fadeIn 1s ease;
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to { opacity: 1; transform: none; }
+}
+.animate-slide-in-left {
+  animation: slideInLeft 1.2s cubic-bezier(.4,2,.3,1);
+}
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.7); }
+  to { opacity: 1; transform: scale(1); }
+}
+.animate-pop-in {
+  animation: popIn 0.7s cubic-bezier(.4,2,.3,1);
+}
+.animate-btn-glow {
+  box-shadow: 0 0 8px #E3B50588;
+  transition: box-shadow 0.3s;
+}
+.animate-btn-glow:hover {
+  box-shadow: 0 0 24px #E3B505cc;
+}
+
+/* NFT Card Animation */
+@keyframes nftCard {
+  from { opacity: 0; transform: scale(0.95) translateY(30px); }
+  to { opacity: 1; transform: none; }
+}
+.animate-nft-card {
+  animation: nftCard 0.8s cubic-bezier(.4,2,.3,1);
+}
